@@ -1,6 +1,6 @@
 # Packer Templates
 This repository contains a Packer template for building minimal
-Vagrant boxes based on Debian 12.10 (bookworm) for VirtualBox (amd64).
+Vagrant boxes based on Debian for VirtualBox (amd64).
 It focuses on reproducibility, fast setup, and clean structure.
 
 Most ideas were adapted from [chef/bento](https://github.com/chef/bento).
@@ -15,4 +15,4 @@ Most ideas were adapted from [chef/bento](https://github.com/chef/bento).
 
 → Build instructions in [manual.md](./manual.md).
 
-Prebuilt boxes are available on [Vagrant Cloud](https://portal.cloud.hashicorp.com/vagrant/discover/akelbikhanov/debian12.10).
+Prebuilt boxes are available on [Vagrant Cloud](https://portal.cloud.hashicorp.com/vagrant/discover/akelbikhanov).
