@@ -2,33 +2,13 @@
 .idea/
 .vscode/
 
-# Конфигурации
-.env*
-*.env
-
-# Артефакты сборки
-*.out
-*.log
-*.test
-**/bin/
-**/debug/
-
-# Кеш линтера
-.golangci-lint.cache
-coverage.*
-
-# Временные файлы
-*.tmp
-*.swp
-/tmp/
-
-# Docker
-docker-compose.override.yml
-
 # Системные файлы
 .DS_Store
 Thumbs.db
 ehthumbs.db
 
-# iso-файлы
+# iso-файлы и артефакты запуска
 *.iso
+*.box
+packer_cache/
+/output*

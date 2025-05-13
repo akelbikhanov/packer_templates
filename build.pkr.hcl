@@ -87,13 +87,13 @@ build {
   }
 
   provisioner "shell" {
-    script = "setup.sh"
-    execute_command = "echo '${ssh_password}' | {{ .Vars }} sudo -S -E bash -c '{{ .Path }}'"
+    script = "./scripts/setup.sh"
+    execute_command = "echo 'vagrant' | {{ .Vars }} sudo -S -E bash -c '{{ .Path }}'"
   }
 
   provisioner "shell" {
-    script = "cleanup.sh"
-    execute_command = "echo '${ssh_password}' | {{ .Vars }} sudo -S -E bash -c '{{ .Path }}'"
+    script = "./scripts/cleanup.sh"
+    execute_command = "echo 'vagrant' | {{ .Vars }} sudo -S -E bash -c '{{ .Path }}'"
   }
 
   post-processor "vagrant" {

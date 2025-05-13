@@ -24,11 +24,11 @@ fi
 
 # Размонтирование и удаление ISO
 umount "$MOUNT_POINT"
+rmdir "$MOUNT_POINT"
 rm -f "$ISO"
 
 # Установка базовых пакетов
-apt-get update
-apt-get install -y sudo openssh-server curl ca-certificates jq gnupg iproute2
+apt-get install -y sudo openssh-server curl ca-certificates
 
 # Настройка пользователя vagrant
 mkdir -p /home/vagrant/.ssh
