@@ -55,7 +55,7 @@ source "virtualbox-iso" "debian" {
 
   boot_command = [
     "<wait><esc><wait>",
-    "auto preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg",
+    "auto preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/http/preseed.cfg",
     "<enter>"
   ]
 
@@ -91,9 +91,10 @@ build {
     execute_command = "echo '${ssh_password}' | {{ .Vars }} sudo -S -E bash -c '{{ .Path }}'"
   }
 
-#  provisioner "shell" {
-#    script = "cleanup.sh"
-#  }
+  provisioner "shell" {
+    script = "cleanup.sh"
+    execute_command = "echo '${ssh_password}' | {{ .Vars }} sudo -S -E bash -c '{{ .Path }}'"
+  }
 
   post-processor "vagrant" {
     output              = "${var.vm_name}.box"
